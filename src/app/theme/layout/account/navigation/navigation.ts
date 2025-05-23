@@ -15,7 +15,7 @@ export interface NavigationItem {
   children?: NavigationItem[];
 }
 export const NavigationItems: NavigationItem[] = [
-   {
+  {
     id: 'navigation',
     title: 'Dashboard',
     type: 'group',
@@ -25,23 +25,23 @@ export const NavigationItems: NavigationItem[] = [
         id: 'dashboard',
         title: 'Dashboard',
         type: 'item',
-        url: '/dashboard',
+        url: '/account/dashboard',
         icon: 'feather icon-home',
         classes: 'nav-item'
       }
     ]
   },
   {
-    id: 'account',
-    title: 'Account',
+    id: 'admin',
+    title: 'admin',
     type: 'group',
     icon: 'icon-navigation',
     children: [
       {
-        id: 'account',
-        title: 'หน้าจัดการบัญชี',
+        id: 'pos-app',
+        title: 'POS Page',
         type: 'item',
-        url: '/account/dashboard',
+        url: '/dashboard',
         icon: 'feather icon-home',
         classes: 'nav-item'
       }

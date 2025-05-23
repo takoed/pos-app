@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
 import { AdminComponent } from './theme/layout/admin/admin.component';
 import { GuestComponent } from './theme/layout/guest/guest.component';
-import { authGuard } from './guards/auth.guard';
+import { AccountComponent } from './theme/layout/account/account.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,22 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadComponent: () => import('./main/dashboard/dashboard.component').then((c) => c.DashboardComponent)
+      }
+    ]
+  },
+  {
+    path: 'account',
+    canActivate: [authGuard],
+    component: AccountComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        loadComponent: () => import('./main/account/dashboard/dashboard.component').then((c) => c.DashboardComponent)
       }
     ]
   },
