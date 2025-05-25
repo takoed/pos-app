@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost/pos-api/users/';
+  // private apiUrl = 'http://localhost/pos-api/users/';
+  private apiUrl = 'https://apipos.rf.gd/users';
   private storageKey = 'pos-username';
 
   constructor(private http: HttpClient) {}

@@ -7,13 +7,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  usernameAdmin;
+  // usernameAdmin;
 
   constructor(
-    private authService: AuthService,
+    // private authService: AuthService,
   ) {}
 
-  ngOnInit() {
-     this.usernameAdmin = this.authService.getUsername();
-  }
+  // ngOnInit() {
+  //    this.usernameAdmin = this.authService.getUsername();
+  // }
 }

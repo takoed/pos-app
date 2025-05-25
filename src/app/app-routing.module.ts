@@ -8,7 +8,7 @@ import { AccountComponent } from './theme/layout/account/account.component';
 const routes: Routes = [
   {
     path: '',
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
     component: AdminComponent,
     children: [
       {
@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'account',
-    canActivate: [authGuard],
+    // canActivate: [authGuard],
     component: AccountComponent,
     children: [
       {
@@ -38,16 +38,16 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: 'auth',
-    component: GuestComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: () => import('./main/pages/authentication/authentication.module').then((m) => m.AuthenticationModule)
-      }
-    ]
-  }
+  // {
+  //   path: 'auth',
+  //   component: GuestComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       loadChildren: () => import('./main/pages/authentication/authentication.module').then((m) => m.AuthenticationModule)
+  //     }
+  //   ]
+  // }
 ];
 
 @NgModule({

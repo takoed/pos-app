@@ -6,11 +6,10 @@ import { CommonModule } from '@angular/common';
 // project import
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { BreadcrumbsComponent } from '../../shared/components/breadcrumbs/breadcrumbs.component';
 
 @Component({
   selector: 'app-account',
-  imports: [NavBarComponent, NavigationComponent, RouterModule, CommonModule, BreadcrumbsComponent],
+  imports: [NavBarComponent, NavigationComponent, RouterModule, CommonModule],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })
